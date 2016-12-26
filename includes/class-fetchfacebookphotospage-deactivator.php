@@ -22,15 +22,17 @@
  */
 class Fetchfacebookphotospage_Deactivator {
 
-	/**
+    /**
 	 * Short Description. (use period)
 	 *
 	 * Long Description.
 	 *
 	 * @since    1.0.0
 	 */
-	public static function deactivate() {
+    public static function deactivate() {
 
-	}
+        wp_clear_scheduled_hook( 'fetch_photos_daily_event' );
+
+    }
 
 }
