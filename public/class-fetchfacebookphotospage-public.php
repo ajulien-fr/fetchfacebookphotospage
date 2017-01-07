@@ -122,10 +122,10 @@ class Fetchfacebookphotospage_Public {
             'default_graph_version' => 'v2.8',
         ]);
         
-        // You have to overwrite this String: "1273122812729734" from $fb->get();
+        // You have to overwrite this String: "****************" from $fb->get();
         // by the album id of your facebook page!
         try {
-            $response = $fb->get('/1273122812729734/photos?fields=images,link', $opt_FetchFacebookPhotosPage['opt-facebook-token']);
+            $response = $fb->get('/****************/photos?fields=images,link', $opt_FetchFacebookPhotosPage['opt-facebook-token']);
         } catch(Facebook\Exceptions\FacebookResponseException $e) {
             error_log( 'Graph returned an error: ' . $e->getMessage() );
             exit;
